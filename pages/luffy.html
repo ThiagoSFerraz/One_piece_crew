@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../jarallax.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Luffy</title>
+  </head>
+  <body class="character-page">
+    <section class="character-section">
+      <button id="botaoMudo" type="button">Unmute</button>
+
+      <a href="../index.html"
+        ><button id="goHome" type="button">Home</button></a
+      >
+
+      <div class="character-text">
+        <h1>Monkey D. Luffy</h1>
+        <a id="showMore" href="#section2">View more</a>
+      </div>
+      <video id="luffyg5" autoplay loop class="back-video" muted>
+        <source src="../img/LuffyG5.mp4" type="video/mp4" />
+      </video>
+    </section>
+    <section id="section2">
+      <div class="box">
+        <h2 data-jarallax-element="0 -100">Monkey D. Luffy</h2>
+        <div class="container">
+          <div class="imgBx jarallax">
+            <img src="../img/Luffy.jpg" class="jarallax-img" />
+          </div>
+          <div data-jarallax-element="-50 -100" class="contentLuffy">
+            <p>
+              <b>Captain</b>
+              <br />
+              <br />
+              Monkey D. Luffy, also known as "Straw Hat Luffy" and commonly as
+              "Straw Hat", is the main protagonist of the manga and anime, One
+              Piece. He is the founder and captain of the increasingly infamous
+              and powerful Straw Hat Pirates, as well as one of its top
+              fighters. His lifelong dream is to become the Pirate King by
+              finding the legendary treasure left behind by the late Gol D.
+              Roger. He believes that being Pirate King means having the most
+              freedom in the world
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      var meuVideo = document.getElementById("luffyg5");
+      var botaoMudo = document.getElementById("botaoMudo");
+
+      botaoMudo.addEventListener("click", function () {
+        if (meuVideo.muted) {
+          meuVideo.muted = false;
+          botaoMudo.textContent = "Mute";
+        } else {
+          meuVideo.muted = true;
+          botaoMudo.textContent = "Unmute";
+        }
+      });
+    </script>
+  </body>
+</html>

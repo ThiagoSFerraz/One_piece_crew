@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../jarallax.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Zoro</title>
+  </head>
+  <body class="character-page">
+    <section class="character-section">
+      <button id="botaoMudo" type="button">Unmute</button>
+
+      <a href="../index.html"
+        ><button id="goHome" type="button">Home</button></a
+      >
+
+      <div class="character-text">
+        <h1>Roronoa Zoro</h1>
+        <a id="showMore" href="#section2">View more</a>
+      </div>
+      <video id="zoro" autoplay loop class="back-video" muted>
+        <source src="../img/Zoro.mp4" type="video/mp4" />
+      </video>
+    </section>
+    <section id="section2">
+      <div class="box">
+        <h2 data-jarallax-element="0 -100">Roronoa Zoro</h2>
+        <div class="container">
+          <div class="imgBx jarallax">
+            <img src="../img/Zoro.jpg" class="jarallax-img" />
+          </div>
+          <div data-jarallax-element="-50 -100" class="contentZoro">
+            <p>
+              <b>Combatant</b>
+              <br />
+              <br />
+              Roronoa Zoro, also known as "Pirate Hunter" Zoro, is the combatant
+              of the Straw Hat Pirates, and one of their two swordsmen. Formerly
+              a bounty hunter, he is the second member of the crew and the first
+              to join, doing so in the Romance Dawn Arc. As a master of
+              Santoryu, a swordsmanship style which he created during his
+              childhood training in Shimotsuki Village, Zoro is among the four
+              most powerful combatants of the Straw Hats, alongside Luffy, Sanji
+              and Jinbe. His dream is to become the greatest swordsman in the
+              world, in order to honor a promise he made to his deceased
+              childhood friend Kuina.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      var meuVideo = document.getElementById("zoro");
+      var botaoMudo = document.getElementById("botaoMudo");
+
+      botaoMudo.addEventListener("click", function () {
+        if (meuVideo.muted) {
+          meuVideo.muted = false;
+          botaoMudo.textContent = "Mute";
+        } else {
+          meuVideo.muted = true;
+          botaoMudo.textContent = "Unmute";
+        }
+      });
+    </script>
+  </body>
+</html>

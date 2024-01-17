@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../jarallax.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Jimbei</title>
+  </head>
+  <body class="character-page">
+    <section class="character-section">
+      <button id="botaoMudo" type="button">Unmute</button>
+
+      <a href="../index.html"
+        ><button id="goHome" type="button">Home</button></a
+      >
+
+      <div class="character-text">
+        <h1>Jimbei</h1>
+        <a id="showMore" href="#section2">View more</a>
+      </div>
+      <video id="jimbei" autoplay loop class="back-video" muted>
+        <source src="../img/Jimbei.mp4" type="video/mp4" />
+      </video>
+    </section>
+    <section id="section2">
+      <div class="box">
+        <h2 data-jarallax-element="0 -100">Jimbei</h2>
+        <div class="container">
+          <div class="imgBx jarallax">
+            <img src="../img/jimbei.jpg" class="jarallax-img" />
+          </div>
+          <div data-jarallax-element="-50 -100" class="contentJimbei">
+            <p>
+              <b>Helmsman</b>
+              <br />
+              <br />
+              "Knight of the Sea" Jimbei is the helmsman of the Straw Hat
+              Pirates. He is the tenth member of the crew and the ninth to join,
+              doing so during the Wano Country Arc's Third Act.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      var meuVideo = document.getElementById("jimbei");
+      var botaoMudo = document.getElementById("botaoMudo");
+
+      botaoMudo.addEventListener("click", function () {
+        if (meuVideo.muted) {
+          meuVideo.muted = false;
+          botaoMudo.textContent = "Mute";
+        } else {
+          meuVideo.muted = true;
+          botaoMudo.textContent = "Unmute";
+        }
+      });
+    </script>
+  </body>
+</html>
